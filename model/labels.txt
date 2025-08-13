@@ -1,8 +1,0 @@
-0 Jijik
-1 Marah
-2 Netral
-3 Sedih
-4 Senang
-5 Takut
-6 Terkejut
-7 Tidak Valid
