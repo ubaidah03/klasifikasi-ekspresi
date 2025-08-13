@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* === Font Global === */
+body, .card-container, .card, .card-body, .overlay-box {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === Card pada beranda === */
+.card-container {
+    display: block; /* Memastikan setiap kartu menempati satu baris */
+    justify-content: center; 
+    gap: 1.5rem; 
+    margin-top: 2rem;
+    
+    /* Tambahkan pengaturan lebar maksimum untuk kontainer agar semua kartu tidak terlalu lebar */
+    max-width: 600px; /* Lebar maksimum untuk area tempat kartu-kartu berada */
+    margin-left: auto; /* Menengahkan kontainer */
+    margin-right: auto; /* Menengahkan kontainer */
+    padding: 0 1rem; /* Sedikit padding samping jika di layar kecil */
+}
+
+.card {
+    background-color: #ffffffee;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+    width: 100%; /* Kunci: Setiap kartu mengambil lebar penuh kontainer */
+    max-width: 500px; /* Atur lebar maksimum untuk setiap kartu */
+    margin-left: auto; /* Untuk menengahkan kartu jika max-width digunakan */
+    margin-right: auto; /* Untuk menengahkan kartu jika max-width digunakan */
+    margin-top: 2rem;
+    margin-bottom: 2rem; /* Tambahkan jarak vertikal antar kartu */
+    transition: transform 0.25s ease;
+    backdrop-filter: blur(6px);
+    box-sizing: border-box;
+    display: flex; /* Gunakan flexbox untuk konten di dalam kartu */
+    align-items: flex-start; /* Sejajarkan item ke atas */
+    text-align: left; /* Teks rata kiri di dalam kartu */
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100px; /* Ukuran gambar yang lebih kecil */
+    height: 100px; /* Ukuran gambar yang lebih kecil */
+    min-width: 100px; /* Pastikan gambar tidak menyusut */
+    min-height: 100px; /* Pastikan gambar tidak menyusut */
+    border-radius: 50%; /* Membuat gambar lingkaran */
+    object-fit: cover;
+    margin-right: 1rem; /* Jarak antara gambar dan teks */
+    flex-shrink: 0; /* Mencegah gambar menyusut jika ruang terbatas */
+}
+
+.card-body {
+    flex-grow: 1; /* Memungkinkan body teks mengambil sisa ruang */
+    display: flex; /* Gunakan flexbox untuk elemen di dalam card-body */
+    flex-direction: column; /* Menumpuk judul, deskripsi, tombol secara vertikal */
+    justify-content: flex-start; /* Untuk mendorong tombol ke bawah jika ada ruang */
+}
+
+.card-body h3 {
+    margin-top: 0rem; /* Hapus margin atas default */
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    color: #2d1a7f;
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #555;
+    margin: 0 0 0.8rem 0; /* Sesuaikan margin agar lebih rapat */
+}
+
+.card-body a,
+.card-link {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background-color: #725ac2;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    align-self: flex-start; /* Sejajarkan tombol ke kiri di dalam flex container */
+    margin-top: 0.5rem; /* Mendorong tombol ke bawah jika ada ruang kosong di atasnya */
+}
+
+.card-body a:hover,
+.card-link:hover {
+    background-color: #fff;
+    color: #725ac2;
+    border: 2px solid #725ac2
+}
+
+/* === Overlay Box Header === */
+.overlay-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 18px;
+    padding: 24px 24px 32px 24px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+}
+
+.overlay-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #4b3b97;
+    margin-bottom: 12px;
+}
+
+.overlay-subtitle {
+    font-size: 16px;
+    color: #555;
+}
+
+/* === Tombol Klasifikasi === */
+.stButton > button {
+    background-color: #725ac2 !important;
+    color: white !important;
+    border-radius: 10px !important;
+    padding: 10px 24px !important;
+    border: none !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    margin-top: -1rem !important;
+}
+
+.stButton > button:hover {
+    background-color: #fff0f0 !important;
+    color: #725ac2!important;
+    border: 2px solid #725ac2 !important;
+    cursor: pointer !important;
+}
+
+/* === Garis putus-putus unggah gambar === */
+[data-testid="stFileUploader"],
+[data-testid="stCameraInput"] {
+    border: 2px dashed #c3b5e8 !important;
+    border-radius: 12px !important;
+    padding: 1.5em;
+    background-color: #ffffff !important;
+    text-align: center;
+    margin-top: 15px;
+}
+
+[data-testid="stFileUploader"]:hover,
+[data-testid="stCameraInput"]:hover {
+    border-color: #a28de4 !important;
+    background-color: #faf8ff !important;
+}
+
+/* Media Query Khusus untuk tampilan vertikal di layar kecil */
+@media (max-width: 600px) {
+    .card {
+        flex-direction: column; /* Tumpuk gambar dan teks vertikal di layar kecil */
+        align-items: center; /* Pusatkan item */
+        text-align: center; /* Pusatkan teks */
+    }
+
+    .card img {
+        margin-right: 0;
+        margin-bottom: 15px; /* Jarak bawah gambar ketika ditumpuk */
+    }
+
+    .card-body {
+        align-items: center; /* Pusatkan elemen di dalam card-body */
+        text-align: center; /* Pusatkan teks */
+    }
+
+    .card-body a,
+    .card-link {
+        align-self: center; /* Pusatkan tombol di layar kecil */
+    }
+}
+
+.custom-footer {
+    background-color: #221d2b; /* Warna latar belakang footer */
+    padding: 20px 0;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    border-top: 1px solid #ddd;
+    width: 100%;
+}
