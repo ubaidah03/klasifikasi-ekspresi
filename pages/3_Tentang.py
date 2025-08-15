@@ -30,44 +30,40 @@ st.title("Tentang Website")
 st.image("assets/logo_ekspresi.png", width=250)
 
 # Deskripsi Aplikasi
-st.markdown("""
-### Klasifikasi Ekspresi Wajah
-Aplikasi ini dikembangkan untuk mendeteksi ekspresi wajah manusia menggunakan teknologi kecerdasan buatan (AI).  
-Pengguna dapat mengunggah gambar atau menggunakan kamera langsung untuk melihat hasil klasifikasi dari model yang telah dilatih.
+st.markdown(
+    """
+    <div class='custom-text'>
 
-Model ini mampu mengenali berbagai ekspresi seperti:
-- Senang 
-- Sedih   
-- Marah  
-- Terkejut
-- Takut
-- Jijik
-- Netral
-""")
+    ### Klasifikasi Ekspresi Wajah
+    Aplikasi ini dikembangkan untuk mendeteksi ekspresi wajah manusia menggunakan teknologi kecerdasan buatan (AI).  
+    Pengguna dapat mengunggah gambar atau menggunakan kamera langsung untuk melihat hasil klasifikasi dari model yang telah dilatih.
 
-# Tentang Pengembang
-st.markdown("""
-### Tentang Pengembang
-Halo! Saya **Ubaidah Luthfiyah Zain**, pengembang website ini. Saat ini saya menempuh perkuliahan di Universitas Gunadarma
-jurusan Informatika.
-""")
+    Model ini mampu mengenali berbagai ekspresi seperti:
+    - Senang 
+    - Sedih   
+    - Marah  
+    - Terkejut
+    - Takut
+    - Jijik
+    - Netral
 
-# Teknologi yang digunakan
-st.markdown("""
-### Teknologi yang Digunakan
-- Python + Streamlit (untuk membuat website)
-- Keras / TensorFlow (untuk pelatihan model)  
-- PIL & OpenCV (untuk pemrosesan gambar)  
-- CSS (untuk tampilan yang modern)
-""")
+    ### Tentang Pengembang
+    Halo! Saya **Ubaidah Luthfiyah Zain**, pengembang website ini. Saat ini saya menempuh perkuliahan di Universitas Gunadarma
+    jurusan Informatika.
 
-# Kontak
-st.markdown("""
-### Kontak
-Jika Anda memiliki pertanyaan, saran, atau ingin terhubung:
-- Email: **zainubaidah@gmail.com**  
-- GitHub: [github.com/ubaidah03](https://github.com/ubaidah03)
-""")
+    ### Teknologi yang Digunakan
+    - Python + Streamlit (untuk membuat website)
+    - Keras / TensorFlow (untuk pelatihan model)  
+    - PIL & OpenCV (untuk pemrosesan gambar)  
+    - CSS (untuk tampilan yang modern)
+
+    ### Kontak
+    Jika Anda memiliki pertanyaan, saran, atau ingin terhubung:
+    - Email: **zainubaidah@gmail.com**  
+    - GitHub: [github.com/ubaidah03](https://github.com/ubaidah03)
+    """,
+    unsafe_allow_html=True
+    )
 
 # ==== Footer ==== 
 st.markdown(
