@@ -73,11 +73,13 @@ with col1:
     st.title("WEBSITE KLASIFIKASI EKSPRESI WAJAH")
     st.markdown(
         """
+        <p class='custom-text'>
         Selamat datang! Platform ini dirancang khusus untuk membantu Anda mengenali 
-        dan memahami ekspresi wajah secara otomatis menggunakan teknologi AI (*Artificial Intelligence*). 
+        dan memahami ekspresi wajah secara otomatis menggunakan teknologi AI (Artificial Intelligence). 
         Silakan pilih menu di sidebar untuk memulai proses klasifikasi ekspresi wajah atau jelajahi berbagai 
         jenis ekspresi yang berada di bawah ini:
-        """
+        """,
+        unsafe_allow_html=True
     )
 
 with col2:
@@ -89,19 +91,6 @@ with col2:
 
 st.markdown("---") # Garis pemisah
 st.markdown("<h2 style='text-align: center; color: #4b3b97;'>Jelajahi Berbagai Ekspresi</h2>", unsafe_allow_html=True)
-
-st.markdown(
-    """
-    <p style='text-align: center; font-size: 17px; color: #444;'>
-        Wajah adalah bagian tubuh yang dapat mencerminkan emosi seseorang melalui ekspresi yang ditampilkan. 
-        Ekspresi merupakan salah satu komunikasi secara nonverbal dengan menunjukkan emosi dari wajah. 
-        Ekspresi terdiri dari berbagai macam, seperti senang, sedih, marah, jijik, takut, terkejut, maupun netral.
-        Berikut adalah beberapa ekspresi wajah yang umum ditemui. Klik salah satu untuk mempelajari lebih lanjut.
-    </p>
-    """,
-    unsafe_allow_html=True
-)
-
 
 # ==== Load gambar dengan base64 ====
 def safe_load_image(path):
