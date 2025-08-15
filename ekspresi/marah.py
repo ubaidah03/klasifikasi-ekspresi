@@ -32,34 +32,41 @@ def tampilkan_halaman():
         st.warning("Gambar ekspresi marah tidak ditemukan.")
 
     # ==== Konten Markdown ====
-    st.markdown("""
-    ## Karakteristik Ekspresi Marah
+    st.markdown(
+        """
+        <div class='custom-text'>
+                    
+        ### Karakteristik Ekspresi Marah
 
-    Ekspresi marah biasanya ditandai oleh beberapa ciri fisik berikut:
+        Ekspresi marah biasanya ditandai oleh beberapa ciri fisik berikut:
 
-    - Sisi alis bagian dalam menyatu dan condong ke bawah
-    - Bibir tampak menyempit
-    - Kelopak mata bagian bawah menegang
-    - Mata menatap dengan tajam
+        - Sisi alis bagian dalam menyatu dan condong ke bawah
+        - Bibir tampak menyempit
+        - Kelopak mata bagian bawah menegang
+        - Mata menatap dengan tajam
 
-    Ekspresi ini biasanya muncul saat seseorang merasakan kemarahan atau frustrasi.
+        Ekspresi ini biasanya muncul saat seseorang merasakan kemarahan atau frustrasi.
 
-    ---
+        ---
 
-    ### Contoh Situasi
-    - Hasil yang diperoleh tidak sesuai rencana
-    - Merasa direndahkan atau dihina
-    - Mengalami frustrasi
-    - Merasa keselamatannya terancam
-    - Mendapatkan perlakuan yang tidak semestinya
-    - Terpaksa melakukan sesuatu di luar kehendaknya
+        ### Contoh Situasi
+        - Hasil yang diperoleh tidak sesuai rencana
+        - Merasa direndahkan atau dihina
+        - Mengalami frustrasi
+        - Merasa keselamatannya terancam
+        - Mendapatkan perlakuan yang tidak semestinya
+        - Terpaksa melakukan sesuatu di luar kehendaknya
 
-    ---
+        ---
 
-    ### Catatan Tambahan
-    Ekspresi marah sering menjadi sinyal bahwa seseorang 
-    sedang menghadapi tekanan atau konflik, dan penting untuk mengenali serta mengelola emosi ini secara sehat agar tidak berdampak negatif.
-    """)
+        ### Catatan Tambahan
+        Ekspresi marah sering menjadi sinyal bahwa seseorang 
+        sedang menghadapi tekanan atau konflik, dan penting untuk mengenali serta mengelola emosi ini secara sehat agar tidak berdampak negatif.
+        
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
     # ==== Footer (dipindahkan ke dalam fungsi) ====
     st.markdown(
