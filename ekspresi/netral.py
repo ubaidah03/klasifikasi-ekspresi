@@ -32,31 +32,36 @@ def tampilkan_halaman():
         st.warning("Gambar ekspresi netral tidak ditemukan.")
 
     # ==== Konten Markdown ====
-    st.markdown("""
-    ## Karakteristik Ekspresi Netral
+    st.markdown(
+        """         
+        <div class='custom-text'>
+        
+        ### Karakteristik Ekspresi Netral
 
-    Ekspresi netral biasanya ditandai oleh beberapa ciri fisik seperti berikut:
+        Ekspresi netral biasanya ditandai oleh beberapa ciri fisik seperti berikut:
 
-    - Otot wajah dalam kondisi rileks
-    - Alis dan mata dalam posisi normal tanpa ketegangan
-    - Bibir tertutup tanpa ekspresi (tidak tersenyum atau mengerut)
-    - Rahang tidak menegang
+        - Otot wajah dalam kondisi rileks
+        - Alis dan mata dalam posisi normal tanpa ketegangan
+        - Bibir tertutup tanpa ekspresi (tidak tersenyum atau mengerut)
+        - Rahang tidak menegang
 
-    Ekspresi ini sering muncul ketika seseorang tidak sedang mengalami emosi tertentu atau dalam keadaan fokus dan tenang.
+        Ekspresi ini sering muncul ketika seseorang tidak sedang mengalami emosi tertentu atau dalam keadaan fokus dan tenang.
 
-    ---
+        ---
 
-    ### Contoh Situasi
-    - Tidak sedang merasakan emosi yang kuat
-    - Dalam keadaan fokus saat bekerja atau berpikir
-    - Saat berpikir atau berkonsentrasi
+        ### Contoh Situasi
+        - Tidak sedang merasakan emosi yang kuat
+        - Dalam keadaan fokus saat bekerja atau berpikir
+        - Saat berpikir atau berkonsentrasi
 
-    ---
+        ---
 
-    ### Catatan Tambahan
-    Ekspresi netral mencerminkan keadaan wajah yang alami dan rileks, seringkali sulit untuk menilai perasaan seseorang 
-    hanya dari ekspresi ini karena tidak ada tanda emosional yang jelas terlihat.
-    """)
+        ### Catatan Tambahan
+        Ekspresi netral mencerminkan keadaan wajah yang alami dan rileks, seringkali sulit untuk menilai perasaan seseorang 
+        hanya dari ekspresi ini karena tidak ada tanda emosional yang jelas terlihat.
+        """,
+        unsafe_allow_html=True
+        )
 
     # ==== Footer (dipindahkan ke dalam fungsi) ====
     st.markdown(
