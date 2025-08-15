@@ -32,33 +32,38 @@ def tampilkan_halaman():
         st.warning("Gambar ekspresi senang tidak ditemukan.")
 
     # ==== Konten Markdown ====
-    st.markdown("""
-    ## Karakteristik Ekspresi Senang
+    st.markdown(
+        """
+        <div class='custom-text'>
 
-    Ekspresi senang biasanya ditandai oleh beberapa ciri fisik berikut:
+        ### Karakteristik Ekspresi Senang
 
-    - Otot pipi dan ujung bibir naik
-    - Gigi terlihat saat tersenyum
-    - Kerutan di antara bagian luar hidung dan mulut
-    - Kelopak mata bawah tampak menegang atau berkerut
-    - Guratan halus di sudut luar mata
+        Ekspresi senang biasanya ditandai oleh beberapa ciri fisik berikut:
 
-    Ekspresi ini biasanya muncul saat seseorang merasakan kebahagiaan atau kepuasan.
+        - Otot pipi dan ujung bibir naik
+        - Gigi terlihat saat tersenyum
+        - Kerutan di antara bagian luar hidung dan mulut
+        - Kelopak mata bawah tampak menegang atau berkerut
+        - Guratan halus di sudut luar mata
 
-    ---
+        Ekspresi ini biasanya muncul saat seseorang merasakan kebahagiaan atau kepuasan.
 
-    ### Contoh Situasi
-    - Mencapai tujuan yang diharapkan
-    - Memperoleh keuntungan atau keberhasilan
-    - Mengingat hal-hal yang menyenangkan
-    - Melihat atau mendengar sesuatu yang menyenangkan
+        ---
 
-    ---
+        ### Contoh Situasi
+        - Mencapai tujuan yang diharapkan
+        - Memperoleh keuntungan atau keberhasilan
+        - Mengingat hal-hal yang menyenangkan
+        - Melihat atau mendengar sesuatu yang menyenangkan
 
-    ### Catatan Tambahan
-    Ekspresi senang tidak hanya menunjukkan perasaan positif, tetapi juga dapat memperkuat 
-    hubungan sosial melalui komunikasi nonverbal yang menyenangkan dan hangat.
-    """)
+        ---
+
+        ### Catatan Tambahan
+        Ekspresi senang tidak hanya menunjukkan perasaan positif, tetapi juga dapat memperkuat 
+        hubungan sosial melalui komunikasi nonverbal yang menyenangkan dan hangat.
+        """,
+        unsafe_allow_html=True
+        )
 
     # ==== Footer ====
     st.markdown(
