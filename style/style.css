@@ -19,7 +19,7 @@ body, .card-container, .card, .card-body, .overlay-box {
 }
 
 .card {
-    background-color: #ffffffee;
+    background-color: #ffffffee !important;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     padding: 1rem;
@@ -63,12 +63,12 @@ body, .card-container, .card, .card-body, .overlay-box {
     margin-top: 0rem; /* Hapus margin atas default */
     margin-bottom: 0.5rem;
     font-size: 1.3rem;
-    color: #2d1a7f;
+    color: #2d1a7f !important;
 }
 
 .card-body p {
     font-size: 14px;
-    color: #555;
+    color: #555 !important;
     margin: 0 0 0.8rem 0; /* Sesuaikan margin agar lebih rapat */
 }
 
@@ -76,8 +76,8 @@ body, .card-container, .card, .card-body, .overlay-box {
 .card-link {
     display: inline-block;
     padding: 0.4rem 0.8rem;
-    background-color: #725ac2;
-    color: white;
+    background-color: #725ac2 !important;
+    color: white !important;
     border-radius: 10px;
     text-decoration: none;
     font-size: 0.9rem;
@@ -89,9 +89,9 @@ body, .card-container, .card, .card-body, .overlay-box {
 
 .card-body a:hover,
 .card-link:hover {
-    background-color: #fff;
-    color: #725ac2;
-    border: 2px solid #725ac2
+    background-color: #fff !important;
+    color: #725ac2 !important;
+    border: 2px solid #725ac2 !important
 }
 
 /* === Overlay Box Header === */
@@ -105,16 +105,16 @@ body, .card-container, .card, .card-body, .overlay-box {
     backdrop-filter: blur(8px);
 }
 
-.overlay-title {
+.overlay-title, h2 {
     font-size: 36px;
     font-weight: bold;
-    color: #4b3b97;
+    color: #4b3b97 !important; 
     margin-bottom: 12px;
 }
 
 .overlay-subtitle {
     font-size: 16px;
-    color: #555;
+    color: #555 !important;
 }
 
 /* === Tombol Klasifikasi === */
@@ -178,12 +178,24 @@ body, .card-container, .card, .card-body, .overlay-box {
 }
 
 .custom-footer {
-    background-color: #221d2b; /* Warna latar belakang footer */
+    background-color: #221d2b !important; /* Warna latar belakang footer */
     padding: 20px 0;
     margin-top: 50px;
     text-align: center;
-    color: white;
+    color: white !important;
     font-size: 15px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ddd !important;
     width: 100%;
+}
+
+/*judul*/
+h1, .custom-text, ul, li {
+    color: #221d2b !important;
+}
+
+/* === Garis pembatas Markdown === */
+div[data-testid="stMarkdownContainer"] hr {
+    border: none !important;
+    border-top: 1px solid rgb(194, 194, 194) !important;
+    margin: 20px 0 !important;
 }
