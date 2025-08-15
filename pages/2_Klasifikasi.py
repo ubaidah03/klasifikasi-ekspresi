@@ -64,13 +64,15 @@ if option == "Upload Gambar":
 
         if st.button("Klasifikasi"):
             loading = st.empty()
-            loading.markdown("**Mendeteksi ekspresi...**")
+            loading.markdown('<div class="loading-text">Mendeteksi ekspresi...</div>', unsafe_allow_html=True)
+
 
             class_name, confidence_score = classify(image, model, class_names)
 
             loading.empty()
-            st.success(f"Ekspresi: **{class_name}**")
-            st.info(f"Akurasi: {confidence_score:.2%}")
+            st.markdown(f'<div class="result-box">Ekspresi: {class_name}</div>', unsafe_allow_html=True)
+            st.markdown(f'<div class="accuracy-box">Akurasi: {confidence_score:.2%}</div>', unsafe_allow_html=True)
+
 
 # ===== Kamera =====
 else:
@@ -84,13 +86,14 @@ else:
 
         if st.button("Klasifikasi"):
             loading = st.empty()
-            loading.markdown("**Mendeteksi ekspresi...**")
+            loading.markdown('<div class="loading-text">Mendeteksi ekspresi...</div>', unsafe_allow_html=True)
+
 
             class_name, confidence_score = classify(image, model, class_names)
 
             loading.empty()
-            st.success(f"Ekspresi: **{class_name}**")
-            st.info(f"Tingkat Keyakinan: {confidence_score:.2%}")
+            st.markdown(f'<div class="result-box">Ekspresi: {class_name}</div>', unsafe_allow_html=True)
+            st.markdown(f'<div class="accuracy-box">Akurasi: {confidence_score:.2%}</div>', unsafe_allow_html=True)
 
 # === Petunjuk langkah-langkah klasifikasi ===
 # Dapatkan gambar dalam format base64
@@ -102,10 +105,22 @@ st.markdown(f"""
     <h2 style="font-size: 1.5rem;">Cara Menggunakan Klasifikasi Ekspresi Wajah</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
         <div style="flex: 1.5; min-width: 250px; line-height: 2;">
-            <p><span style="color: #a36fe4; font-weight: bold;">1️⃣ Langkah 1:</span> Pilih metode input gambar (Upload atau Kamera).</p>
-            <p><span style="color: #a36fe4; font-weight: bold;">2️⃣ Langkah 2:</span> Unggah gambar wajah atau ambil gambar langsung. Hanya bisa mendeteksi satu wajah.</p>
-            <p><span style="color: #a36fe4; font-weight: bold;">3️⃣ Langkah 3:</span> Klik tombol <b>Klasifikasi</b> untuk mendeteksi ekspresi.</p>
-            <p><span style="color: #a36fe4; font-weight: bold;">4️⃣ Langkah 4:</span> Lihat hasil ekspresi dan tingkat akurasinya.</p>
+            <p>
+                <span style="color: #a36fe4; font-weight: bold;">1️⃣ Langkah 1:</span> 
+                <span class="custom-text">Pilih metode input gambar (Upload atau Kamera).</span>
+            </p>
+            <p>
+                <span style="color: #a36fe4; font-weight: bold;">2️⃣ Langkah 2:</span> 
+                <span class="custom-text">nggah gambar wajah atau ambil gambar langsung. Hanya bisa mendeteksi satu wajah.</span>
+            </p>
+            <p>
+                <span style="color: #a36fe4; font-weight: bold;">3️⃣ Langkah 3:</span> 
+                <span class="custom-text">Klik tombol <b>Klasifikasi</b> untuk mendeteksi ekspresi.</span>
+            </p>
+            <p>
+                <span style="color: #a36fe4; font-weight: bold;">4️⃣ Langkah 4:</span> 
+                <span class="custom-text">Lihat hasil ekspresi dan tingkat akurasinya.</span>
+            </p>
         </div>
         <div style="flex: 1; min-width: 200px;">
             <img src="{img_base64_url}" alt="Panduan Gambar" style="max-width: 100%; max-height: 300px; height: auto; border-radius: 6px; object-fit: cover;">
