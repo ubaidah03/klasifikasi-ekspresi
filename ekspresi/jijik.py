@@ -32,33 +32,40 @@ def tampilkan_halaman():
         st.warning("Gambar ekspresi jijik tidak ditemukan.")
 
     # ==== Konten Markdown ====
-    st.markdown("""
-    ## Karakteristik Ekspresi Jijik
+    st.markdown(
+        """
+        <div class='custom-text'>
 
-    Ekspresi jijik biasanya ditandai oleh beberapa ciri fisik berikut:
+        ### Karakteristik Ekspresi Jijik
 
-    - Kelopak mata atas naik
-    - Bibir bagian bawah naik
-    - Hidung berkerut
-    - Pipi naik
-    - Bagian bawah kelopak mata membentuk garis
+        Ekspresi jijik biasanya ditandai oleh beberapa ciri fisik berikut:
 
-    Ekspresi ini biasanya muncul saat seseorang menghadapi sesuatu yang tidak menyenangkan atau menjijikkan.
+        - Kelopak mata atas naik
+        - Bibir bagian bawah naik
+        - Hidung berkerut
+        - Pipi naik
+        - Bagian bawah kelopak mata membentuk garis
 
-    ---
+        Ekspresi ini biasanya muncul saat seseorang menghadapi sesuatu yang tidak menyenangkan atau menjijikkan.
 
-    ### Contoh Situasi
-    - Merasakan sesuatu yang tidak enak atau bau busuk
-    - Menyentuh benda berminyak atau berlendir yang menimbulkan rasa ingin muntah
-    - Melihat sesuatu atau seseorang yang kotor
-    - Menyaksikan perilaku yang bertentangan dengan norma, agama, moral, atau kebiasaan sosial
+        ---
 
-    ---
+        ### Contoh Situasi
+        - Merasakan sesuatu yang tidak enak atau bau busuk
+        - Menyentuh benda berminyak atau berlendir yang menimbulkan rasa ingin muntah
+        - Melihat sesuatu atau seseorang yang kotor
+        - Menyaksikan perilaku yang bertentangan dengan norma, agama, moral, atau kebiasaan sosial
 
-    ### Catatan Tambahan
-    Ekspresi jijik merupakan bentuk perlindungan alami tubuh untuk menghindari hal-hal yang berpotensi membahayakan 
-    kesehatan atau moral sosial.
-    """)
+        ---
+
+        ### Catatan Tambahan
+        Ekspresi jijik merupakan bentuk perlindungan alami tubuh untuk menghindari hal-hal yang berpotensi membahayakan 
+        kesehatan atau moral sosial.
+
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
     # ==== Footer ====
     st.markdown(
