@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 /* === Font Global === */
-body, .card-container, .card, .card-body, .overlay-box {
+body, .card-container, .card, .card-body, .overlay-box, .result-box, .accuracy-box, .loading-text {
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -198,4 +198,43 @@ div[data-testid="stMarkdownContainer"] hr {
     border: none !important;
     border-top: 1px solid rgb(194, 194, 194) !important;
     margin: 20px 0 !important;
+}
+
+/* label dan opsi radio button */
+[data-testid="stRadio"] label,
+[data-testid="stRadio"] label div,
+[data-testid="stRadio"] label span {
+    color: #221d2b  !important;
+}
+
+/* Label uploader */
+[data-testid="stFileUploader"] label,
+[data-testid="stCameraInput"] label {
+    color: #221d2b !important;
+}
+
+/* Hasil klasifikasi Ekspresi */
+.result-box {
+    background-color: rgba(144, 238, 144, 0.3) !important; /* hijau transparan */
+    color: #008000 !important; /* teks hijau solid */
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 19px;
+    margin-top: 10px;
+}
+
+/* Akurasi */
+.accuracy-box {
+    background-color: rgba(173, 216, 230, 0.3) !important; /* biru transparan */
+    color: #0000ff !important; /* teks biru solid */
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.loading-text {
+    color: #221d2b !important;
+    font-size: 16px;
 }
