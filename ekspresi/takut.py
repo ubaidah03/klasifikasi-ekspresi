@@ -36,7 +36,7 @@ def tampilkan_halaman():
         """
         <div class='custom-text'>
 
-        ## Karakteristik Ekspresi Takut
+        ### Karakteristik Ekspresi Takut
 
         Ekspresi takut biasanya ditandai oleh beberapa ciri fisik berikut:
 
@@ -74,3 +74,4 @@ def tampilkan_halaman():
         """,
         unsafe_allow_html=True
     )
+
