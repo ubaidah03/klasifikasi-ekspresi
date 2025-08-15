@@ -32,33 +32,38 @@ def tampilkan_halaman():
         st.warning("Gambar ekspresi takut tidak ditemukan.")
 
     # ==== Konten Markdown ====
-    st.markdown("""
-    ## Karakteristik Ekspresi Takut
+    st.markdown(
+        """
+        <div class='custom-text'>
 
-    Ekspresi takut biasanya ditandai oleh beberapa ciri fisik berikut:
+        ## Karakteristik Ekspresi Takut
 
-    - Alis terangkat naik
-    - Dahi berkerut horizontal
-    - Mata terbuka lebar
-    - Mulut terbuka secara horizontal
-    - Kelopak mata menegang
+        Ekspresi takut biasanya ditandai oleh beberapa ciri fisik berikut:
 
-    Ekspresi ini biasanya muncul saat seseorang merasa takut atau terancam.
+        - Alis terangkat naik
+        - Dahi berkerut horizontal
+        - Mata terbuka lebar
+        - Mulut terbuka secara horizontal
+        - Kelopak mata menegang
 
-    ---
+        Ekspresi ini biasanya muncul saat seseorang merasa takut atau terancam.
 
-    ### Contoh Situasi
-    - Menghadapi situasi yang dirasa sulit atau berbahaya
-    - Merasa terancam secara verbal atau fisik (misalnya dimarahi, dihukum, dihina)
-    - Merasa dikucilkan oleh teman
-    - Berada di lingkungan yang dianggap menakutkan
+        ---
 
-    ---
+        ### Contoh Situasi
+        - Menghadapi situasi yang dirasa sulit atau berbahaya
+        - Merasa terancam secara verbal atau fisik (misalnya dimarahi, dihukum, dihina)
+        - Merasa dikucilkan oleh teman
+        - Berada di lingkungan yang dianggap menakutkan
 
-    ### Catatan Tambahan
-    Ekspresi takut berfungsi sebagai respons perlindungan tubuh terhadap bahaya, 
-    membantu seseorang untuk bersiap menghadapi ancaman atau melarikan diri.
-    """)
+        ---
+
+        ### Catatan Tambahan
+        Ekspresi takut berfungsi sebagai respons perlindungan tubuh terhadap bahaya, 
+        membantu seseorang untuk bersiap menghadapi ancaman atau melarikan diri.
+        """,
+        unsafe_allow_html=True
+        )
     
     # ==== Footer ====
     st.markdown(
