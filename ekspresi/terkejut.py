@@ -36,7 +36,7 @@ def tampilkan_halaman():
         """
         <div class='custom-text'>
         
-        ## Karakteristik Ekspresi Terkejut
+        ### Karakteristik Ekspresi Terkejut
 
         Ekspresi terkejut biasanya ditandai oleh beberapa ciri fisik berikut:
 
@@ -72,3 +72,4 @@ def tampilkan_halaman():
         """,
         unsafe_allow_html=True
     )
+
