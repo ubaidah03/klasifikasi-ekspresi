@@ -32,31 +32,36 @@ def tampilkan_halaman():
         st.warning("Gambar ekspresi terkejut tidak ditemukan.")
 
     # ==== Konten Markdown ====
-    st.markdown("""
-    ## Karakteristik Ekspresi Terkejut
+    st.markdown(
+        """
+        <div class='custom-text'>
+        
+        ## Karakteristik Ekspresi Terkejut
 
-    Ekspresi terkejut biasanya ditandai oleh beberapa ciri fisik berikut:
+        Ekspresi terkejut biasanya ditandai oleh beberapa ciri fisik berikut:
 
-    - Kedua alis naik dan melengkung
-    - Dahi membentuk kerutan horizontal
-    - Kelopak mata terbuka lebar
-    - Rahang bawah terbuka
+        - Kedua alis naik dan melengkung
+        - Dahi membentuk kerutan horizontal
+        - Kelopak mata terbuka lebar
+        - Rahang bawah terbuka
 
-    Ekspresi ini biasanya muncul sebagai respons terhadap kejadian yang tiba-tiba atau tak terduga.
+        Ekspresi ini biasanya muncul sebagai respons terhadap kejadian yang tiba-tiba atau tak terduga.
 
-    ---
+        ---
 
-    ### Contoh Situasi
-    - Mendengar kabar atau informasi yang belum diketahui sebelumnya
-    - Mendapat kejutan yang tidak disangka-sangka
-    - Mengalami peristiwa tak terduga secara langsung
+        ### Contoh Situasi
+        - Mendengar kabar atau informasi yang belum diketahui sebelumnya
+        - Mendapat kejutan yang tidak disangka-sangka
+        - Mengalami peristiwa tak terduga secara langsung
 
-    ---
+        ---
 
-    ### Catatan Tambahan
-    Ekspresi terkejut membantu seseorang merespons cepat terhadap perubahan lingkungan yang mendadak, 
-    mempersiapkan reaksi yang tepat terhadap situasi baru.
-    """)
+        ### Catatan Tambahan
+        Ekspresi terkejut membantu seseorang merespons cepat terhadap perubahan lingkungan yang mendadak, 
+        mempersiapkan reaksi yang tepat terhadap situasi baru.
+        """,
+        unsafe_allow_html=True
+        )
     
     # ==== Footer ====
     st.markdown(
