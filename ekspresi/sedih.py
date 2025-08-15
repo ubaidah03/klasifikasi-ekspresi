@@ -32,33 +32,38 @@ def tampilkan_halaman():
         st.warning("Gambar ekspresi sedih tidak ditemukan.")
 
     # ==== Konten Markdown ====
-    st.markdown("""
-    ## Karakteristik Ekspresi Sedih
+    st.markdown(
+        """
+        <div class='custom-text'>
 
-    Ekspresi sedih biasanya ditandai oleh beberapa ciri fisik berikut:
+        ### Karakteristik Ekspresi Sedih
 
-    - Alis mengerucut ke atas
-    - Kulit di bawah alis membentuk segitiga dengan ujung dalamnya naik
-    - Sudut bibir tertarik ke bawah
-    - Kelopak mata atas terkulai
-                
-    Ekspresi ini biasanya muncul saat seseorang merasakan kesedihan atau kehilangan.
+        Ekspresi sedih biasanya ditandai oleh beberapa ciri fisik berikut:
 
-    ---
+        - Alis mengerucut ke atas
+        - Kulit di bawah alis membentuk segitiga dengan ujung dalamnya naik
+        - Sudut bibir tertarik ke bawah
+        - Kelopak mata atas terkulai
+                    
+        Ekspresi ini biasanya muncul saat seseorang merasakan kesedihan atau kehilangan.
 
-    ### Contoh Situasi
-    - Kehilangan orang yang dicintai
-    - Gagal meraih harapan atau impian
-    - Merasakan empati terhadap penderitaan orang lain
-    - Mengalami putus asa karena kehilangan harapan
-    - Menghadapi perpisahan dengan orang yang berarti
+        ---
 
-    ---
+        ### Contoh Situasi
+        - Kehilangan orang yang dicintai
+        - Gagal meraih harapan atau impian
+        - Merasakan empati terhadap penderitaan orang lain
+        - Mengalami putus asa karena kehilangan harapan
+        - Menghadapi perpisahan dengan orang yang berarti
 
-    ### Catatan Tambahan
-    Ekspresi sedih merupakan respons alami terhadap kehilangan dan kekecewaan, dan 
-    dapat membantu seseorang memproses perasaan tersebut serta mendapatkan dukungan sosial.
-    """)
+        ---
+
+        ### Catatan Tambahan
+        Ekspresi sedih merupakan respons alami terhadap kehilangan dan kekecewaan, dan 
+        dapat membantu seseorang memproses perasaan tersebut serta mendapatkan dukungan sosial.
+        """,
+        unsafe_allow_html=True
+        )
     
     # ==== Footer ====
     st.markdown(
